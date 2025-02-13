@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .nav-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .nav-item a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .nav-item:hover {
+            background: #5db6cd;
+        }
+        .nav-item:hover a {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the API Dashboard</h1>
+    <div class="nav-container">
+        <div class="nav-item"><a href="/weather">Weather API</a></div>
+        <div class="nav-item"><a href="/jokes">Jokes API</a></div>
+        <div class="nav-item"><a href="/nasa">NASA API</a></div>
+        <div class="nav-item"><a href="/manage">Manage API Requests</a></div>
+    </div>
+</body>
+</html>
