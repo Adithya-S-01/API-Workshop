@@ -3,22 +3,71 @@ body {
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+
 }
 
+/* NAVIGATION STYLING */
 nav {
-  background-color: #ff6f61;
+  background-color: transparent;
   padding: 15px;
-  text-align: right; /* Align the nav content to the right */
-  position: absolute; /* Make it float */
+  text-align: right;
+  position: absolute;
   top: 15px;
   right: 15px;
 }
 
+/* HOME BUTTON STYLING (Same as Button) */
 nav a {
-  color: white;
+  --color: #000000;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: #5bd1f5 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
   text-decoration: none;
-  font-weight: bold;
+  background: none;
 }
+
+/* Animated background effect */
+nav a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+nav a:active:before {
+  background: #5bd1f5;
+  transition: background 0s;
+}
+
 
 .container {
   padding: 20px;
@@ -40,9 +89,10 @@ h1 .icon {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px 0;
+  padding: 25px;  /* Reduced from 25px */
+  max-width: 45%; /* Adjust width to make it smaller */
 }
+
 
 /* Style for the text input box */
 .input {
@@ -57,7 +107,7 @@ h1 .icon {
 }
 
 /* Style for the button */
-.button {
+.weather_button {
   border: none;
   background-color: #1363DF;
   text-decoration: none;
@@ -74,4 +124,67 @@ h1 .icon {
 .input-container {
   display: flex;
   align-items: center;
+  margin-bottom:12px ;
 }
+.manage_input {
+  max-width: 200px;
+  background-color: #f5f5f5;
+  color: #242424;
+  padding: .15rem .5rem;
+  min-height: 45px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+.manage_input:focus {
+  border-bottom: 2px solid #ffffff;
+  border-radius: 4px 4px 2px 2px;
+}
+
+.manage_input:hover {
+  outline: 1px solid lightgrey;
+}
+button {
+  display: inline-block;
+  border-radius: 7px;
+  background-color: #ffffff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  color: #000000;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ }
+ 
+ button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ button:hover span {
+  padding-right: 15px;
+ }
+ 
+ button:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
+

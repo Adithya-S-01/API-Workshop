@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script defer src="/js/manage.js"></script>
 </head>
-<body>
+<body style="background-image: url('../assets/Manage_bg.png'); background-size: cover;"> 
     <nav><a href="/">Home</a></nav>
     <div class="container">
         <h1>Manage API Requests</h1>
         <form id="saveApiForm">
-            <input type="text" id="apiName" placeholder="API Name" required>
-            <input type="text" id="apiUrl" placeholder="API URL" required>
+            <input type="text" id="apiName" class="manage_input" placeholder="API Name" required>
+            <input type="text" id="apiUrl" class="manage_input" placeholder="API URL" required>
             <button type="submit">Save API</button>
         </form>
         <div id="apiResults"></div>
