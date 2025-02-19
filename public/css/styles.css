@@ -1,28 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    background-color: #ff6f61;
-    padding: 15px;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  .container {
-    padding: 20px;
-  }
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin: 10px 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ff6f61;
+  padding: 15px;
+  text-align: right; /* Align the nav content to the right */
+  position: absolute; /* Make it float */
+  top: 15px;
+  right: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h1 .icon {
+  font-size: 1.5em; /* Adjust the icon size */
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Style for the text input box */
+.input {
+  max-width: 190px;
+  padding: 15px;
+  font-size: 17px;
+  color: black;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+  border: 2px solid #fff;
+  margin-right: -10px;
+}
+
+/* Style for the button */
+.button {
+  border: none;
+  background-color: #1363DF;
+  text-decoration: none;
+  margin-left: 10px;
+  height: 53px;
+  font-size: 17px;
+  color: #fff;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+  cursor: pointer;
+}
+
+/* Align the input and button next to each other */
+.input-container {
+  display: flex;
+  align-items: center;
+}
